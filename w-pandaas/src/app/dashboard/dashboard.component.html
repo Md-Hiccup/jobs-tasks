@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let dash of dashes">
+      <div class="col-md-3">
+        <div class="card">
+            <div class="icon">
+              <p class="round"><i class={{dash.icon}}></i></p>
+            </div>
+            <p class="title">{{ dash.title }}</p>
+            <p class="subtitle">{{ dash.caption }}</p>
+            <button type="button" class="btn btn-lg" >Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let dash1 of dash11">
+      <div class="col-md-6">
+          <div class="card">
+            <div class="icon">
+              <p class="round"><i class={{dash1.icon}}></i></p>
+            </div>
+            <p class="title">{{ dash1.title }}</p>
+            <p class="subtitle">{{ dash1.caption }}</p>
+            <button type="button" class="btn btn-lg" >Order</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
