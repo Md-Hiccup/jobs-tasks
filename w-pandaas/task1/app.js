@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-mongoose.connect('mongodb://localhost/w-pandaas', { useMongoClient: true, promiseLibrary: require('bluebird')})
+mongoose.connect('mongodb://localhost/task1', { useMongoClient: true, promiseLibrary: require('bluebird')})
     .then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 

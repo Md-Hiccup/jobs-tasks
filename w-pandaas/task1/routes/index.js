@@ -4,13 +4,13 @@ var mongoose = require('mongoose');
 var Dashboard = require('../models/Dashboard');
 
 /*  To GET all The Dashboard data    */
-router.get('/', function(req, res, next){
-    // res.json('In Dashboard');
+router.get('/trix', function(req, res, next){
     console.log("in trix")
-    Dashboard.find(function(err, prod){
-        if(err) return next(err);
-        res.json(prod);
-    });
+    res.json('In Trix editor');
+    // Dashboard.find(function(err, prod){
+    //     if(err) return next(err);
+    //     res.json(prod);
+    // });
 })
 
 

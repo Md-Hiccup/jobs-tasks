@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TrixEditorComponent } from './trixeditor/trixeditor.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes : Routes = [
@@ -14,11 +13,6 @@ const appRoutes : Routes = [
     path: 'dashboards',
     component:  DashboardComponent,
     data : {  title: 'Dashboard '}
-  },
-  {
-    path: 'trixeditor',
-    component: TrixEditorComponent,
-    data : {  title: 'Trix Editor '}
   },
   {
     path: '',
@@ -31,7 +25,6 @@ const appRoutes : Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    TrixEditorComponent,
     NavbarComponent
   ],
   imports: [
