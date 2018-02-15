@@ -3,11 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-// import { AngularTrix } from 'angular-trix';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TrixeditorComponent } from './trixeditor/trixeditor.component';
+import { TrixEditorComponent } from './trixeditor/trixeditor.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes : Routes = [
@@ -17,8 +16,8 @@ const appRoutes : Routes = [
     data : {  title: 'Dashboard '}
   },
   {
-    path: 'trix-editor',
-    component: TrixeditorComponent,
+    path: 'trixeditor',
+    component: TrixEditorComponent,
     data : {  title: 'Trix Editor '}
   },
   {
@@ -32,14 +31,13 @@ const appRoutes : Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    TrixeditorComponent,
+    TrixEditorComponent,
     NavbarComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    // AngularTrix,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // debugging purpose only

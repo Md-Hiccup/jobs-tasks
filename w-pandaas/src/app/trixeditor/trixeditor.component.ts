@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+// import { AngularTrix } from 'angular-trix';
 
 @Component({
   selector: 'app-trixeditor',
   templateUrl: './trixeditor.component.html',
-  styleUrls: ['./trixeditor.component.css']
+  styleUrls: ['./trixeditor.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class TrixeditorComponent implements OnInit {
-
-  constructor() { }
+export class TrixEditorComponent implements OnInit {
+  trixes: any = [];
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    // this.http.get('/trix').subscribe(data => {
+    //   this.trixes = data;
+    // })
   }
 
-}
+} 

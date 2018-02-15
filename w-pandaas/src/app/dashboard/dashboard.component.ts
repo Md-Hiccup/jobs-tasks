@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   dashes: any = DASHLISTS;
   dash11: any = DASH;
   navlinks: any = SIDENAV;
+  // dashboards: any;
   constructor(private http : HttpClient) { }
 
   ngOnInit() {
