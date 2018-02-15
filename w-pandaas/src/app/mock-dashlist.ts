@@ -1,7 +1,7 @@
 import { DashList } from './dashlist';
 
 export const DASHLISTS: DashList[] = [
-    { id: 1, title: "Blog Post", caption: "400-500 Words", icon: "fas fa-file fa-2x"},
+    { id: 1, title: "Blog Post", caption: "400-500 Words", icon: "fas fa-list-alt fa-2x"},
     { id: 2, title: "White Paper", caption: "2500-3000 Words", icon: "fas fa-file fa-2x"},
     { id: 3, title: "Website Content", caption: "250-350 Words", icon: "fas fa-laptop fa-2x"},
     { id: 4, title: "Press Release", caption: "350-450 Words", icon: "fas fa-laptop fa-2x"},

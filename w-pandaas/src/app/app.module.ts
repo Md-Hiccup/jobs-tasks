@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TrixeditorComponent } from './trixeditor/trixeditor.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes : Routes = [
   {
@@ -31,7 +32,8 @@ const appRoutes : Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    TrixeditorComponent
+    TrixeditorComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
