@@ -11,7 +11,7 @@ const Item = (props) => {
                         state:{ item: props.item}
                     }} 
                 >
-                    <p className="Center" id={props.item.id}>{props.item.name}</p>
+                    <p className="Center Title" id={props.item.id}>{props.item.name}</p>
                     <img src={props.item.image} className="img-responsive" id={props.item.id}/>
                 </Link>
             </div>    
