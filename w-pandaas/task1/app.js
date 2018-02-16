@@ -6,11 +6,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-mongoose.connect('mongodb://localhost/task1', { useMongoClient: true, promiseLibrary: require('bluebird')})
+mongoose.connect('mongodb://localhost/task1', { promiseLibrary: require('bluebird')})
     .then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 
-// var trix = require('./routes/trix');
 var index = require('./routes/index');
 var app = express();
 
@@ -18,9 +17,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/dashboards', express.static(path.join(__dirname, 'dist')));
-// app.use('/trix', trix);
-app.use('/', index);
+app.use('/trixs', express.static(path.join(__dirname, 'dist')));
+app.use('/trix', index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
