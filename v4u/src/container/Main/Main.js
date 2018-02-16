@@ -53,7 +53,7 @@ class App extends Component {
       return <h1 className="Center"> Loading.... </h1>
     }
     return (
-      <div className="container">
+      <div className="container-fluid">
         {/* <button className={classes.Button } onClick = {this.getList}>Show List</button> */}
         <div className="row">
           <List
