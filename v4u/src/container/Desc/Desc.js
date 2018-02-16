@@ -3,22 +3,19 @@ import React,{ Component }from 'react';
 import ShowDesc from '../../component/ShowDesc/ShowDesc';
 
 class Desc extends Component {
-    constructor(props){
-        super();
-        this.state = {}
-    }
-    render() {
+    render(){
+    const { location } = this.props;
+    // console.log(location);
         return (
-            <div className="container" style={center}>
-                <h2> Description </h2>
-                <ShowDesc />
+            <div className="container">
+                <div className="Card">
+                    <h2>{location.state.item.name}</h2>
+                    <img src={location.state.item.image} />
+                    <p>{location.state.item.description}</p>
+                 </div>
             </div>
         )
     }
-}
-
-const center ={
-    textAlign: 'center',
-}
+} 
 
 export default Desc;

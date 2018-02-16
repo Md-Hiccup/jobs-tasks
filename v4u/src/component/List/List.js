@@ -15,7 +15,7 @@ const list = (props) => {
         })
     }
     const listOutput = allItem.map(list => {
-        console.log('o/p', list);
+        // console.log('o/p', list);
         return (
             <Item 
                 key = {list.id}
@@ -23,7 +23,7 @@ const list = (props) => {
             />
         )
     })
-    console.log('items',props);
+    // console.log('items',props);
     return (
         <div>
             {listOutput}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classes from './Main.css';
 
 import List from '../../component/List/List';
+import Link from 'react-router-dom/Link';
 
 const API = "http://texpertise.in/data.php";
 
@@ -18,14 +18,13 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    console.log('componentDidMount');
     // fetch(API).then(res => res.json()).then(data => { console.log('dataaa', data)})
     axios.get(API, {
       headers: { 'Content-Type': 'application/json' }
     }).then(res => {
-      console.log('res', res)
-      if (res.status == 200) {
-        console.log('data: ', res);
+      // console.log('res', res)
+      if (res.status === 200) {
+        // console.log('data: ', res);
         const fetchLists = [];
         for (let key in res.data) {
           fetchLists.push({
@@ -40,13 +39,18 @@ class App extends Component {
     }).catch(error => this.setState({ error, isLoading: false }));
   }
 
+  showDetailHandler = (event) => {
+    const id = event.target.id;
+    // fetch('localhost:3000/desc/'+id).then(res => {  console.log(res);}) 
+    console.log('id', id);
+  }
+
   render() {
-    console.log('Main render method');
     if(this.state.error){
-      return <h1 style={center}>{this.state.error.message}</h1>
+      return <h1 className="Center">{this.state.error.message}</h1>
     }
     if(this.state.isLoading) {
-      return <h1 style={center}> Loading.... </h1>
+      return <h1 className="Center"> Loading.... </h1>
     }
     return (
       <div className="container">
@@ -61,7 +65,4 @@ class App extends Component {
   }
 }
 
-const center = {
-  textAlign: 'center',
-}
 export default App;
