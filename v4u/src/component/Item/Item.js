@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Item = (props) => {
     return (
-        <div className="col-md-3">
+        <div className="col-3 col-4 col-6 col-xs-12 ">
             <div className="Card">
                 <Link 
                     to={{
